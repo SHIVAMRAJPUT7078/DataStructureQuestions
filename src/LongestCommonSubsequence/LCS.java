@@ -28,7 +28,7 @@ public class LCS {
         Scanner sc = new Scanner(System.in);
 //        String text1 = sc.nextLine();//abcde
 //        String text2 = sc.nextLine();//ace
-        String text1 = "abcde";
+        String text1 = "aec";
         String text2 = "ace";
         int[][] dp = new int[text1.length() + 1][text2.length() + 1];
         for (int[] row : dp) {
