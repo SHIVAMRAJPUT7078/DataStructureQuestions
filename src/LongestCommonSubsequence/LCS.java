@@ -19,7 +19,7 @@ public class LCS {
         int in = helper(s1, s2, n - 1, m, dp);
         int ex = helper(s1, s2, n, m - 1, dp);
 
-        return (Math.max(in, ex));
+       return dp[n][m] = (Math.max(in, ex));
 
 
     }
