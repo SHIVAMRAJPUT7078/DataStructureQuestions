@@ -23,6 +23,7 @@ public class BinaryTree {
 
     private Node root;
 
+
     private Node construct(Node parent, boolean ilc) {
         if (parent == null) { // means this is the root node as root node does not have its parent node
             System.out.println("Enter the value of root");
@@ -37,18 +38,19 @@ public class BinaryTree {
         int data = sc.nextInt();
         Node node = new Node();
         node.value = data;
-        System.out.println("Kya " + data + "Ka left child hai");
+        System.out.println("Kya " + data + " Ka left child hai");
         boolean kyaLeftChildHai = sc.nextBoolean();
         if (kyaLeftChildHai) {
             node.left = construct(node, true);
         }
-        System.out.println("Kya " + data + "Ka right child hai");
+        System.out.println("Kya " + data + " Ka right child hai");
         boolean kyaRightChildHai = sc.nextBoolean();
         if (kyaRightChildHai) {
-            node.right = construct(node, true);
+            node.right = construct(node, false);
         }
         return node;
     }
+
 
     public void displayTree() {
         this.displayTree(this.root);
@@ -77,6 +79,19 @@ public class BinaryTree {
         System.out.println(str);
         displayTree(node.left);
         displayTree(node.right);
+    }
+
+    public int height() {
+        return this.height(this.root);
+    }
+
+    private int height(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+        return 1 + Math.max(leftHeight, rightHeight);
     }
 
 
