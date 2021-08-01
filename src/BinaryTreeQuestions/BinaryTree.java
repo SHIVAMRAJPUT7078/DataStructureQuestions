@@ -94,6 +94,19 @@ public class BinaryTree {
         return 1 + Math.max(leftHeight, rightHeight);
     }
 
+    public void preOrderTraverse() {
+        this.preOrderTraverse(this.root);
+    }
+
+    private void preOrderTraverse(Node node) {
+        if (node == null) {
+            return;
+        }
+        System.out.print(node.value + " ");
+        preOrderTraverse(node.left);
+        preOrderTraverse(node.right);
+    }
+
 
 // 1 true 2 true 4 false false false true 3 false false
 
