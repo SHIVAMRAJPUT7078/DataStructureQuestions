@@ -107,6 +107,20 @@ public class BinaryTree {
         preOrderTraverse(node.right);
     }
 
+    public void postOrderTraverse() {
+        this.postOrderTraverse(this.root);
+    }
+
+    private void postOrderTraverse(Node node) {
+        if (node == null) {
+            return;
+        }
+
+        postOrderTraverse(node.left);
+        postOrderTraverse(node.right);
+        System.out.print(node.value + " ");
+    }
+
 
 // 1 true 2 true 4 false false false true 3 false false
 

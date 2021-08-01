@@ -7,5 +7,7 @@ public class BinaryTreeClient {
 //        bt.height();
         System.out.println("Height of Tree is : " + bt.height());
         bt.preOrderTraverse();
+        System.out.println();
+        bt.postOrderTraverse();
     }
 }
