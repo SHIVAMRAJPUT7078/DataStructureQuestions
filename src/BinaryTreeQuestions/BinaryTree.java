@@ -139,7 +139,19 @@ public class BinaryTree {
         InOrderTraverse(node.right);
     }
 
+    public int maxInTree() {
+        return this.maxInTree(this.root);
+    }
 
+    private int maxInTree(Node node) {
+        if (node == null) {
+            return Integer.MIN_VALUE;
+        }
+        int leftmax = maxInTree(node.left);
+        int rightmax = maxInTree(node.right);
+        return (Math.max(node.value, Math.max(leftmax, rightmax)));
+
+    }
 // 1 true 2 true 4 false false false true 3 false false
 
 }

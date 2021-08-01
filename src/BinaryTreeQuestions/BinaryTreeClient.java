@@ -12,6 +12,8 @@ public class BinaryTreeClient {
 //        System.out.println();
 //        bt.InOrderTraverse();
 
+        System.out.println("Maximum element of the tree is : " + bt.maxInTree());
+
 
     }
 }
