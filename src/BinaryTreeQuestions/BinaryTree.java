@@ -84,7 +84,7 @@ public class BinaryTree {
     public int height() {
         return this.height(this.root);
     }
-
+    // height is the height of root to the deepest leaf
     private int height(Node node) {
         if (node == null) {
             return 0;
@@ -97,6 +97,7 @@ public class BinaryTree {
     public void preOrderTraverse() {
         this.preOrderTraverse(this.root);
     }
+    // root left right
 
     private void preOrderTraverse(Node node) {
         if (node == null) {
@@ -111,6 +112,7 @@ public class BinaryTree {
         this.postOrderTraverse(this.root);
     }
 
+    // left right root
     private void postOrderTraverse(Node node) {
         if (node == null) {
             return;
@@ -125,6 +127,7 @@ public class BinaryTree {
         this.InOrderTraverse(this.root);
     }
 
+    // left root right
     private void InOrderTraverse(Node node) {
         if (node == null) {
             return;
