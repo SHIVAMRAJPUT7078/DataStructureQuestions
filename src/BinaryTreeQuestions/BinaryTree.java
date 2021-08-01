@@ -121,6 +121,21 @@ public class BinaryTree {
         System.out.print(node.value + " ");
     }
 
+    public void InOrderTraverse() {
+        this.InOrderTraverse(this.root);
+    }
+
+    private void InOrderTraverse(Node node) {
+        if (node == null) {
+            return;
+        }
+
+        InOrderTraverse(node.left);
+        System.out.print(node.value + " ");
+
+        InOrderTraverse(node.right);
+    }
+
 
 // 1 true 2 true 4 false false false true 3 false false
 

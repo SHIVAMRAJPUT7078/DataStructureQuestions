@@ -9,5 +9,7 @@ public class BinaryTreeClient {
         bt.preOrderTraverse();
         System.out.println();
         bt.postOrderTraverse();
+        System.out.println();
+        bt.InOrderTraverse();
     }
 }
